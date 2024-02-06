@@ -27,7 +27,7 @@ export const Logo = () => {
                     LiveVHS
                 </p>
                 <p className="text-sm text-muted-foreground">
-                    Let's Record!
+                    Let's Stream
                 </p>
             </div>
         </div>
