@@ -13,7 +13,7 @@ export const Logo = () => {
     return (
         <Link href="/">
             <div className="flex items-center gap-x-4 hover:opacity-75 transition">
-                <div className="bg-white rounded-full p-1 mr-10 shrink-0 lg:mr-0 lg:shrink">
+                <div className="rounded-full p-1 mr-10 shrink-0 lg:mr-0 lg:shrink" style={{backgroundImage: 'linear-gradient(to right, #B2EBF2, #C8E6C9)'}}>
                     <Image 
                         src="/logo.png" 
                         alt="Logo" 
