@@ -17,8 +17,8 @@ export const Logo = () => {
                     <Image 
                         src="/logo.png" 
                         alt="Logo" 
-                        height="32" 
-                        width="32" 
+                        height="48" 
+                        width="48" 
                     />
                 </div>
                 <div className={cn(

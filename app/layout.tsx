@@ -11,6 +11,9 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'LiveVHS',
   description: 'Live streaming platform',
+  icons: {
+    icon: "/logo.png"
+  }
 }
 
 export default function RootLayout({
