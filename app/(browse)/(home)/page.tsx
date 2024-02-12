@@ -1,3 +1,5 @@
+import { SignInButton } from "@clerk/nextjs";
+
 export default function Home() {
   return (
     <div className="flex flex-col justify-center items-center gap-y-4 px-4">
@@ -14,7 +16,11 @@ export default function Home() {
         </ul>
       </div>
       <p className="text-lg font-semibold text-center">Ready to join the revolution?</p>
-      <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Get Started</button>
+      <SignInButton>
+        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+          Get Started
+        </button>
+      </SignInButton>
     </div>
   );
 };
