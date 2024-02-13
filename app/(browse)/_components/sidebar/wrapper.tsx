@@ -9,7 +9,6 @@ import { useSidebar } from "@/store/use-sidebar";
 import { ToggleSkeleton } from "./toggle";
 import { RecommendedSkeleton } from "./recommended";
 
-
 interface WrapperProps {
     children: React.ReactNode;
 };
