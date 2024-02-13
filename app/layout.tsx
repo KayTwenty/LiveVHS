@@ -1,31 +1,32 @@
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import { ClerkProvider } from '@clerk/nextjs'
-import { dark } from '@clerk/themes'
-import './globals.css'
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import { ClerkProvider } from "@clerk/nextjs";
+import { dark } from "@clerk/themes";
+import { Toaster } from "sonner";
+import "./globals.css";
 
-import { ThemeProvider } from '@/components/theme-provider'
+import { ThemeProvider } from "@/components/theme-provider";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'LiveVHS',
-  description: 'Live streaming platform',
+  title: "LiveVHS",
+  description: "Live streaming platform",
   icons: {
-    icon: "/logo.png"
-  }
-}
+    icon: "/logo.png",
+  },
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <ClerkProvider
       appearance={{
-        baseTheme: dark
-      }}  
+        baseTheme: dark,
+      }}
     >
       <html lang="en">
         <body className={inter.className}>
@@ -34,10 +35,11 @@ export default function RootLayout({
             forcedTheme="dark"
             storageKey="livevhs-theme"
           >
+            <Toaster theme="light" position="bottom-center" />
             {children}
           </ThemeProvider>
         </body>
       </html>
     </ClerkProvider>
-  )
+  );
 }
