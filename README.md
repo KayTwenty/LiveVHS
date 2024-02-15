@@ -17,6 +17,9 @@
 
 To run this project locally, you will need **Node version 18.17 or later**. follow these steps below:
 
+<details closed>
+<summary><b>Instructions</b></summary>
+
 1. Clone the repository:
 ```bash
 git clone https://github.com/KayTwenty/LiveVHS.git
@@ -47,6 +50,7 @@ npm run dev
 ngrok http 3000
 ```
 The site should now be available at http://localhost:3000.
+</details>
 
 ## Prisma
 Add MySQL Database to .env
@@ -63,4 +67,4 @@ npx prisma db push
 
 ## License
 
-This project is has no license at the moment.
+This project currently has no license
