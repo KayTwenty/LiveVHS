@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# LiveVHS - FullStack Streaming Platform
 
-## Getting Started
+## Table of Contents
+- [Features](#features)
+- [Installation](#installation)
+- [Prisma](#prisma)
+- [Licensing](#license)
 
-First, run the development server:
+## Features
+- Live streaming of video content
+- Chat functionality for real-time interaction with viewers
+- User authentication and authorization
+- Analytics and viewer statistics
 
+## Installation
+
+To run this project locally, you will need **Node version 18.17 or later**. follow these steps below:
+
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/KayTwenty/LiveVHS.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Navigate to the project directory:
+```bash
+cd LiveVHS
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Install the necessary dependencies:
+```bash
+npm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+4. Install ngrok globally:
+```bash
+npm install -g ngrok
+```
 
-## Learn More
+5. Run the development server:
+```
+npm run dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+6. Start ngrok tunnel:
+```bash
+ngrok http 3000
+```
+The site should now be available at http://localhost:3000.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Prisma
+Add MySQL Database to .env
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+1. Generate the Prisma configuration
+```bash
+npx prisma generate
+```
 
-## Deploy on Vercel
+2. Push the Prisma database file to your own database
+```bash
+npx prisma db push
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## License
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+This project is has no license at the moment.
