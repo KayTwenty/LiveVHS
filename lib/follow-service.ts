@@ -1,13 +1,14 @@
 import { db } from "@/lib/db";
 import { getSelf } from "@/lib/auth-service";
 
+// Function to retrieve users followed by the currently logged-in user
 export const getFollowedUsers = async () => {
     try {
         const self = await getSelf();
 
         const followedUsers = db.follow.findMany({
             where: {
-                followerId: self.id,
+                followerId: self.id, 
             },
             include: {
                 following: true,
@@ -20,6 +21,7 @@ export const getFollowedUsers = async () => {
     }
 }
 
+// Function to check if the currently logged-in user is following a specific user
 export const isFollowingUser = async (id: string) => {
     try {
         const self = await getSelf();
@@ -49,6 +51,7 @@ export const isFollowingUser = async (id: string) => {
     }
 };
 
+// Function to follow a specific user
 export const followUser = async (id: string) => {
     const self = await getSelf();
 
@@ -89,6 +92,7 @@ export const followUser = async (id: string) => {
     return follow;
 };
 
+// Function to unfollow a specific user
 export const unfollowUser = async (id: string) => {
     const self = await getSelf();
 
