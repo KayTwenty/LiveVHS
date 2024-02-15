@@ -8,6 +8,7 @@ generator client {
   provider = "prisma-client-js"
 }
 
+// User model to represent the users of the application
 model User {
   id             String  @id @default(uuid())
   username       String  @unique
@@ -18,10 +19,14 @@ model User {
   following  Follow[] @relation("Following")
   followedBy Follow[] @relation("FollowedBy")
 
+  blocking  Block[] @relation("Blocking")
+  blockedBy Block[] @relation("BlockedBy")
+
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
 
+// Follow model to represent the many-to-many relationship between users
 model Follow {
   id          String @id @default(uuid())
   followerId  String
@@ -36,4 +41,18 @@ model Follow {
   @@unique([followerId, followingId])
   @@index([followerId])
   @@index([followingId])
+}
+
+// Block model to represent the block relationship between users
+model Block {
+  id        String @id @default(uuid())
+  blockerId String
+  blockedId String
+
+  blocker User @relation(name: "Blocking", fields: [blockerId], references: [id], onDelete: Cascade)
+  blocked User @relation(name: "BlockedBy", fields: [blockedId], references: [id], onDelete: Cascade)
+
+  @@unique([blockerId, blockedId])
+  @@index([blockerId])
+  @@index([blockedId])
 }
