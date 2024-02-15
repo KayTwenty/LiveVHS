@@ -1,4 +1,5 @@
 # LiveVHS - FullStack Streaming Platform
+<img src="https://raw.githubusercontent.com/KayTwenty/LiveVHS/main/public/banner.png" alt="Banner">
 
 ## Table of Contents
 - [Features](#features)
