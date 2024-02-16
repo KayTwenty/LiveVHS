@@ -5,7 +5,8 @@ datasource db {
 }
 
 generator client {
-  provider = "prisma-client-js"
+  provider        = "prisma-client-js"
+  previewFeatures = ["fullTextSearch", "fullTextIndex"]
 }
 
 // User model to represent the users of the application
@@ -22,8 +23,36 @@ model User {
   blocking  Block[] @relation("Blocking")
   blockedBy Block[] @relation("BlockedBy")
 
+  streams Stream?
+
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+}
+
+// Stream model to represent the streams of the application
+model Stream {
+  id           String  @id @default(uuid())
+  name         String  @db.Text
+  thumbnailUrl String? @db.Text
+
+  ingressId String? @unique
+  serverUrl String? @db.Text
+  streamKey String? @db.Text
+
+  isLive             Boolean @default(false)
+  isChatEnabled      Boolean @default(true)
+  isChatDelayed      Boolean @default(false)
+  isChatFollowrsOnly Boolean @default(false)
+
+  userId String @unique
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([userId])
+  @@index([ingressId])
+  @@fulltext([name])
 }
 
 // Follow model to represent the many-to-many relationship between users

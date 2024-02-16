@@ -15,12 +15,6 @@ export default function Home() {
           <li>Seamless integration with social media</li>
         </ul>
       </div>
-      <p className="text-lg font-semibold text-center">Ready to join the revolution?</p>
-      <SignInButton>
-        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-          Get Started
-        </button>
-      </SignInButton>
     </div>
   );
 };
