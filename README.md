@@ -11,6 +11,7 @@
 ## Features
 
 - Live streaming of video content
+- Complete follow system
 - Chat functionality for real-time interaction with viewers
 - User authentication and authorization
 - Analytics and viewer statistics
@@ -20,11 +21,11 @@
 Before you begin, ensure you have the following installed:
 
 - Node.js (v18.17.1)
-- npm or yarn
+- Npm or Yarn
 - Next.js (v14)
-- MySQL
+- Prisma ORM with MySQL
 - Tailwind CSS
-- Clerk for user Authentication
+- Clerk for User Authentication
 
 
 ## Installation
