@@ -5,17 +5,31 @@
 - [Features](#features)
 - [Installation](#installation)
 - [Prisma](#prisma)
+- [Docker](#docker)
 - [Licensing](#license)
 
 ## Features
+
 - Live streaming of video content
 - Chat functionality for real-time interaction with viewers
 - User authentication and authorization
 - Analytics and viewer statistics
 
+## Prerequisites
+
+Before you begin, ensure you have the following installed:
+
+- Node.js (v18.17.1)
+- npm or yarn
+- Next.js (v14)
+- MySQL
+- Tailwind CSS
+- Clerk for user Authentication
+
+
 ## Installation
 
-To run this project locally, you will need **Node version 18.17 or later**. follow these steps below:
+To run this project locally, follow these steps below:
 
 <details closed>
 <summary><b>Instructions</b></summary>
@@ -33,6 +47,8 @@ cd LiveVHS
 3. Install the necessary dependencies:
 ```bash
 npm install
+# or
+yarn install
 ```
 
 4. Install ngrok globally:
@@ -41,8 +57,10 @@ npm install -g ngrok
 ```
 
 5. Run the development server:
-```
+```bash
 npm run dev
+# or 
+yarn dev
 ```
 
 6. Start ngrok tunnel:
@@ -63,6 +81,24 @@ npx prisma generate
 2. Push the Prisma database file to your own database
 ```bash
 npx prisma db push
+```
+
+## Docker
+To run LiveVHS using Docker, follow these steps:
+
+1. Build the Docker image:
+```bash
+docker build -t my-livevhs-app:v1.0 .
+```
+
+2. Run the Docker container:
+```bash
+docker run -p 3000:3000 \
+-e NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY="your_publishable_key" \
+-e CLERK_SECRET_KEY="your_secret_key" \
+-e CLERK_WEBHOOK_SECRET="your_webhook_secret" \
+-e DATABASE_URL="mysql://example" \
+my-livevhs-app:v1.0
 ```
 
 ## License
