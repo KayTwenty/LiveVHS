@@ -3,6 +3,7 @@
 
 ## Table of Contents
 - [Features](#features)
+- [Prerequisites](#prerequisites)
 - [Installation](#installation)
 - [Prisma](#prisma)
 - [Docker](#docker)
@@ -21,12 +22,11 @@
 Before you begin, ensure you have the following installed:
 
 - Node.js (v18.17.1)
-- Npm or Yarn
 - Next.js (v14)
 - Prisma ORM with MySQL
 - Tailwind CSS
+- ShadCN UI Library
 - Clerk for User Authentication
-
 
 ## Installation
 
