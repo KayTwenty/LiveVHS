@@ -21,12 +21,12 @@
 
 Before you begin, ensure you have the following installed:
 
-- Node.js (v18.17.1)
-- Next.js (v14)
-- Prisma ORM with MySQL
-- Tailwind CSS
-- ShadCN UI Library
-- Clerk for User Authentication
+- Node.js (v18.17.1): [Download](https://nodejs.org/en/download/)
+- Next.js (v14) [Getting Started](https://nextjs.org/docs/getting-started)
+- Prisma ORM with MySQL: [Getting Started](https://www.prisma.io/docs/getting-started/setup-prisma/start-from-scratch-typescript)
+- Tailwind CSS: [Getting Started](https://tailwindcss.com/docs/guides/nextjs)
+- ShadCN UI Library: [Getting Started](https://ui.shadcn.com/docs)
+- Clerk for User Authentication: [Getting Started](https://clerk.com/docs/quickstarts/nextjs)
 
 ## Installation
 
