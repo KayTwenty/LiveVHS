@@ -69,7 +69,7 @@ The site should now be available at http://localhost:3000.
 </details>
 
 ## Prisma
-Add MySQL Database to .env
+Add PostgreSQL Database to .env
 
 1. Generate the Prisma configuration
     ```bash
@@ -95,7 +95,7 @@ To run LiveVHS using Docker, follow these steps:
     -e NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY="your_publishable_key" \
     -e CLERK_SECRET_KEY="your_secret_key" \
     -e CLERK_WEBHOOK_SECRET="your_webhook_secret" \
-    -e DATABASE_URL="mysql://example" \
+    -e DATABASE_URL="postgresql://example" \
     my-livevhs-app:v1.0
     ```
 
