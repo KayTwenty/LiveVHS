@@ -12,7 +12,6 @@ export default function Home() {
           <li>Interactive chat with viewers</li>
           <li>Monetization options for creators</li>
           <li>Customizable channel pages</li>
-          <li>Seamless integration with social media</li>
         </ul>
       </div>
     </div>
